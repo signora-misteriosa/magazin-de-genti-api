@@ -17,7 +17,7 @@ class ShishaController extends Controller
     public function store(Request $request)
     {
         $bag = Bag::create($request->all());
-        return response()->json($bag, 201); //HTTP 201 - cod de stare care indica ca geanta a fost adaugata cu succes
+        return response()->json($bag);
     }
 
 
@@ -40,6 +40,6 @@ class ShishaController extends Controller
     {
         $bag = Bag::findOrFail($id);
         $bag->delete();
-        return response()->json(null, 204);
+        return response()->json(null);
     }
 }
