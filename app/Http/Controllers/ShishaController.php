@@ -10,7 +10,7 @@ class ShishaController extends Controller
     //returnez toate gentile
     public function index()
     {
-        return response()->json(Bag::all());
+        return Bag::all();
     }
 
     //adaug o geanta noua
